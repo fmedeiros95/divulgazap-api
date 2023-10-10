@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true
+  },
+  "generateOptions": {
+    "spec": false
+  },
+  "projects": {
+    "storage": {
+      "type": "library",
+      "root": "libs/storage",
+      "entryFile": "index",
+      "sourceRoot": "libs/storage/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/storage/tsconfig.lib.json"
+      }
+    },
+    "baileys": {
+      "type": "library",
+      "root": "libs/baileys",
+      "entryFile": "index",
+      "sourceRoot": "libs/baileys/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/baileys/tsconfig.lib.json"
+      }
+    }
+  }
+}
