@@ -36,3 +36,7 @@ lerna-debug.log*
 
 # Env files
 .env
+
+# Storage files
+storage/baileys/*
+storage/uploads/*

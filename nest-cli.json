@@ -1,31 +1,34 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/divulgazap-api/src",
   "compilerOptions": {
     "deleteOutDir": true,
-    "webpack": true
+    "webpack": true,
+    "tsConfigPath": "apps/divulgazap-api/tsconfig.app.json"
   },
   "generateOptions": {
     "spec": false
   },
+  "monorepo": true,
+  "root": "apps/divulgazap-api",
   "projects": {
-    "storage": {
-      "type": "library",
-      "root": "libs/storage",
-      "entryFile": "index",
-      "sourceRoot": "libs/storage/src",
+    "divulgazap-api": {
+      "type": "application",
+      "root": "apps/divulgazap-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/divulgazap-api/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/storage/tsconfig.lib.json"
+        "tsConfigPath": "apps/divulgazap-api/tsconfig.app.json"
       }
     },
     "baileys": {
-      "type": "library",
-      "root": "libs/baileys",
-      "entryFile": "index",
-      "sourceRoot": "libs/baileys/src",
+      "type": "application",
+      "root": "apps/baileys",
+      "entryFile": "main",
+      "sourceRoot": "apps/baileys/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/baileys/tsconfig.lib.json"
+        "tsConfigPath": "apps/baileys/tsconfig.app.json"
       }
     }
   }

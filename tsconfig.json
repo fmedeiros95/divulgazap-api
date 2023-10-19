@@ -11,9 +11,7 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
-      "~/*": ["src/*"],
-      "~/libs/storage": ["libs/storage/src"],
-      "~/libs/storage/*": ["libs/storage/src/*"]
+      "~/*": ["src/*"]
     },
     "rootDirs": ["src"],
     "incremental": true,
